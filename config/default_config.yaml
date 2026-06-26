@@ -1,0 +1,54 @@
+# Конфигурация системы MAS с Архитектором
+
+system:
+  max_agents: 100
+  max_groups: 20
+  agents_per_group: 5
+
+# Параметры иерархической кластеризации (HCLC)
+hclc:
+  max_cluster_size: 5
+  influence_overlap_threshold: 0.3
+  coordination_levels: 2
+
+# Параметры декартова фильтра
+cartesian_filter:
+  x_axis: "solution_quality"       # Ось X квадрата Декарта
+  y_axis: "task_completion_rate"   # Ось Y квадрата Декарта
+  x_threshold: 0.0
+  y_threshold: 0.0
+  
+  # Пороги для бинарного фильтра
+  thresholds:
+    min_task_completion: 0.6
+    min_resource_efficiency: 0.5
+    min_time_efficiency: 0.5
+    min_solution_quality: 0.0
+    max_error_rate: 0.3
+    min_consistency: 0.5
+    max_coordination_overhead: 0.4
+    max_conflict_rate: 0.2
+    max_communication_load: 0.5
+    min_learning_rate: 0.0
+    min_robustness: 0.4
+    min_scalability: 0.3
+
+# Параметры Архитектора
+architect:
+  target_survival_rate: 0.3       # % групп, которые должны выжить
+  exploration_rate: 0.1           # ε-greedy для исследования
+  learning_rate: 0.3
+  evaluation_rounds: 10
+  adaptive_thresholds: true
+
+# Стратегии групп агентов
+strategies:
+  enabled:
+    - greedy
+    - genetic
+    - swarm
+    - hybrid
+    - auction
+    - ml_based
+  
+  default: hybrid
