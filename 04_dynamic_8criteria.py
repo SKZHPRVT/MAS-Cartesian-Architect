@@ -86,7 +86,7 @@ ax2.set_title('ЛУЧШИЙ SCORE'); ax2.grid(True, alpha=0.3)
 
 # Радар поколения 1
 ax3 = plt.subplot(2, 2, 3, projection='polar')
-labels = ['Истина','Рацио','Эффект-ть','Эффект-сть','Адапт','Этика','Осмысл','Живучесть']
+labels = ['Истинность','Рациональность','Эффективность','Эффектность','Адаптивность','Этичность','Осмысленность','Живучесть']
 angles = np.linspace(0, 2*np.pi, len(labels), endpoint=False)
 angles = np.concatenate([angles, [angles[0]]])
 for r in snapshots[0]:

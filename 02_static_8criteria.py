@@ -87,7 +87,7 @@ for r in static_results:
     label = f"{r['s']}\n({r['x']:.2f},{r['y']:.2f})" if r['passed'] else r['s']
     ax1.annotate(label, (r['x'], r['y']), xytext=(8,8), textcoords='offset points', fontsize=8, fontweight='bold')
 ax1.set_xlim(0,1); ax1.set_ylim(0,1)
-ax1.set_xlabel('X = (Истина+Рацио+Эффектность+Осмысл)/4'); ax1.set_ylabel('Y = (Эффективность+Адаптивность+Живучесть)/3')
+ax1.set_xlabel('X = (Истинность+Рациональность+Эффектность+Осмысленность)/4'); ax1.set_ylabel('Y = (Эффективность+Адаптивность+Живучесть)/3')
 ax1.set_title('КВАДРАТ ДЕКАРТА\n(о = ординар, Х = режект)')
 ax1.grid(True, alpha=0.3)
 
